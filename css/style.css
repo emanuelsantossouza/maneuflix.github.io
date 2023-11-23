@@ -12,16 +12,28 @@ body {
     min-height: 100vh;
     background-color: black;
     color: white;
+    position: relative;
 }
 
-body {
-    display: flex;
-    justify-content: center;
+header{
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    background: transparent;
 }
 
+.logo{
+    width: 200px;
+    border-radius: 30px;
+}
+
+ 
 main {
     width: 100%;
     padding: 3rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .container {
@@ -87,26 +99,47 @@ a {
     color: gray;
 }
 
-.profile img:hover,
-.profile i:hover{
+.profile:hover img,
+.profile:hover i{
     background-color: white;
     border: white solid 5px;
 }
 
-.profile:hover span{
+.profile:hover  span  {
     color: white;
 }
 
-button{
+button {
     font-size: 24px;
     padding: 10px 20px;
     color: gray;
-    border: 1px solid gray;
+    border: 2px solid gray;
     background-color: black;
     cursor: pointer;
 }
 
-button:hover{
+button:hover {
     border: 2px solid white;
     color: white;
+}
+
+
+
+@media (max-width:530px) {
+    header{
+        position: relative;
+    }
+
+    main {
+        padding: 25px 5px;
+    }
+
+    .container h1 {
+        font-size: 3rem;
+    }
+
+    ul li {
+        margin: 0;
+        margin-bottom: 20px;
+    }
 }

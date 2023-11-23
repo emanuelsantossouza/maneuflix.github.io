@@ -6,49 +6,27 @@
     <title>Maneulflix</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     
 </head>
 <body>
+    <header>
+        <nav>
+            <img  class="logo" src="img/logoManeul.png" alt="Logo do Maneulflix">
+        </nav>
+    </header>
+
     <main>
         <div class="container">
             <h1>Quem está assistindo?</h1>
             <ul>
-                <li>
-                    <a href="#">
-                        <div class="profile">
-                            <img src="img/avatar1.png" alt="Gallo">
-                            <span>Gallo</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="profile">
-                            <img src="img/avatar4.png" alt="Emanuel">
-                            <span>Emanuel</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="profile">
-                            <img src="img/avatar6.jpg" alt="Vitória">
-                            <span>Vitória</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="profile">
-                            <i class='bx bxs-plus-circle'></i>
-                            <span>Adicionar perfil</span>
-                        </div>
-                    </a>
-                </li>
+          
             </ul>
-            <button>Gerenciar perfis</button>
+            <button onclick="mensagem()">Gerenciar perfis</button>
         </div>
     </main>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
