@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+/* Reset do CSS Padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+html, body {
+    min-height: 100vh;             /* Altura minima */
+    background-color: black;     /* Cor de Fundo */
+    color: white;                /* Cor do Texto */
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    background: transparent;
+}
+
+.logo {
+    width: 200px;
+    border-radius: 30px;
+}
+
+main {
+    width: 100%;
+    padding: 3rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    min-width: 600px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    font-size: 4rem;        /* Tamanho da Fonte */
+    font-weight: normal;    /* Largura da Fonte */
+    letter-spacing: 0.1rem; /* Espaçamento entre as Letras */
+}
+
+.container h3 {
+    font-size: 1.5rem;
+    font-weight: normal; 
+    margin: 1rem 0;
+    color: gray;
+}
+
+hr {
+    margin: 1.5rem 0;
+    border: 1px solid gray;
+}
+
+form {
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-group img {
+    width: 110px;
+    height: 110px;
+    border-radius: 5px;
+}
+
+input[type=text] {
+    background-color: gray;
+    border: 1px solid gray;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+    flex: 0.9;
+    cursor: default;
+}
+
+::placeholder {
+    color: lightgray;
+    opacity: 1;
+}
+
+::-ms-input-placeholder {
+    color: lightgray;
+}
+
+
+
+button {
+    font-size: 24px;
+    padding: 10px 20px;
+    border: 2px solid gray;
+    color: gray;
+    background-color: black;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 2px solid white;
+    color: white;
+}
+
+@media (max-width: 530px)
+{
+    header {
+        position: relative;
+        text-align: center;
+    }
+
+    main {
+        padding: 25px 5px;
+    }
+
+    .container h1 {
+        font-size: 3rem;
+    }
+
+    ul li {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    button {
+        margin-bottom: 50px;
+    }
+
+}
+
+
