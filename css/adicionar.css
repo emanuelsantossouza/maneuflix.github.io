@@ -8,10 +8,14 @@
     font-family: 'Montserrat', 'Roboto', sans-serif;
 }
 
-html, body {
-    min-height: 100vh;             /* Altura minima */
-    background-color: black;     /* Cor de Fundo */
-    color: white;                /* Cor do Texto */
+html,
+body {
+    min-height: 100vh;
+    /* Altura minima */
+    background-color: black;
+    /* Cor de Fundo */
+    color: white;
+    /* Cor do Texto */
     position: relative;
 }
 
@@ -41,14 +45,17 @@ main {
 }
 
 .container h1 {
-    font-size: 4rem;        /* Tamanho da Fonte */
-    font-weight: normal;    /* Largura da Fonte */
-    letter-spacing: 0.1rem; /* Espaçamento entre as Letras */
+    font-size: 4rem;
+    /* Tamanho da Fonte */
+    font-weight: normal;
+    /* Largura da Fonte */
+    letter-spacing: 0.1rem;
+    /* Espaçamento entre as Letras */
 }
 
 .container h3 {
     font-size: 1.5rem;
-    font-weight: normal; 
+    font-weight: normal;
     margin: 1rem 0;
     color: gray;
 }
@@ -94,24 +101,33 @@ input[type=text] {
     color: lightgray;
 }
 
-
-
 button {
     font-size: 24px;
     padding: 10px 20px;
-    border: 2px solid gray;
-    color: gray;
-    background-color: black;
+    border: 2px solid white;
     cursor: pointer;
 }
 
 button:hover {
-    border: 2px solid white;
-    color: white;
+    border: 2px solid red;
+    color: rgb(255, 255, 255);
+    background-color: red;
 }
 
-@media (max-width: 530px)
-{
+#btnCancel {
+    text-decoration: none;
+    color: gray;
+    border: 1px solid gray;
+    padding: 10px 20px;
+    font-size: 24px;
+}
+
+#btnCancel:hover {
+    color: white;
+    border: 1px solid white;
+}
+
+@media (max-width: 530px) {
     header {
         position: relative;
         text-align: center;
@@ -135,5 +151,3 @@ button:hover {
     }
 
 }
-
-
