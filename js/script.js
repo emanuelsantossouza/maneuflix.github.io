@@ -29,7 +29,7 @@ function init() {
 
                 `
             <li>
-                <a href="#">
+                <a href="filmesBoostrap.html">
                 <div class="profile">
                 <img src="${usuario[i].foto}" alt="${usuario[i].nome}">
                     <span>${usuario[i].nome}</span>
