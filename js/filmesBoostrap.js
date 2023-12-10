@@ -1,3 +1,7 @@
+const menuLateralHTML = document.getElementById('menuLateral');
+const icons = document.getElementById('icons');
+const containerFilmes = document.getElementById('containerFilmes');
+const pegarCarrossel = document.getElementById('carrossel');
 const swiper = new Swiper('.swiper', {
     speed: 100,
     spaceBetween: 1,
@@ -49,35 +53,55 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
-const pegarCarrossel = document.getElementById('carrossel');
+
+
 carrossel = [
-    {
-        name: 'Rangnarok', foto: 'img/rgk.jpeg'
-    },
-    {
-        name: 'Loki', foto: 'img/carrosselLoki.jpg'
-    },
-    {
-        name: 'One Piece', foto: 'img/carroselOne.jpg'
-    },
-    {
-        name: 'Coach Cater', foto: 'img/couchCater.jpg'
-    },
-    {
-        name: 'Sobrenatural', foto: 'img/carroselNetflix.jpg'
-    },
-    {
-        name: 'Naturo', foto: ''
-    },
-    {
-        name: 'Black Cover', foto: ''
-    }
-]
+    { name: 'Rangnarok', foto: 'img/rgk.jpeg' },
+    { name: 'Loki', foto: 'img/carrosselLoki.jpg' },
+    { name: 'One Piece', foto: 'img/carroselOne.jpg' },
+    { name: 'Coach Cater', foto: 'img/couchCater.jpg' },
+    { name: 'Sobrenatural', foto: 'img/carroselNetflix.jpg' },
+    { name: 'Naturo', foto: 'img/carrosselNaruto.jpg' },
+    { name: 'Black Cover', foto: 'img/carrosselBlackClover.jpg' },
+    { name: 'Rangnarok', foto: 'img/rgk.jpeg' },
+    { name: 'Loki', foto: 'img/carrosselLoki.jpg' },
+    { name: 'One Piece', foto: 'img/carroselOne.jpg' },
+    { name: 'Coach Cater', foto: 'img/couchCater.jpg' },
+    { name: 'Sobrenatural', foto: 'img/carroselNetflix.jpg' },
+    { name: 'Naturo', foto: 'img/carrosselNaruto.jpg' },
+    { name: 'Black Cover', foto: 'img/carrosselBlackClover.jpg' },
+    { name: 'Rangnarok', foto: 'img/rgk.jpeg' },
+    { name: 'Loki', foto: 'img/carrosselLoki.jpg' },
+    { name: 'One Piece', foto: 'img/carroselOne.jpg' },
+    { name: 'Coach Cater', foto: 'img/couchCater.jpg' },
+    { name: 'Sobrenatural', foto: 'img/carroselNetflix.jpg' },
+    { name: 'Naturo', foto: 'img/carrosselNaruto.jpg' },
+    { name: 'Black Cover', foto: 'img/carrosselBlackClover.jpg' }
+];
 
 
 
 onlaod = init();
 
 function init() {
+    for (let i = 0; i < carrossel.length; i++) {
+        pegarCarrossel.innerHTML += ` 
 
+        <div class="swiper-slide">
+            <div class="widthImg">
+                <img src="${carrossel[i].foto}" alt="${carrossel[i].name}" />
+            </div>
+       </div>
+        `
+    };
 }
+
+
+menuLateralHTML.addEventListener('mouseover', function () {
+
+});
+
+menuLateralHTML.addEventListener('mouseout', function () {
+
+
+});

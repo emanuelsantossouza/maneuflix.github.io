@@ -5,6 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+
+    overflow-y: hidden;
 }
 
 html,
@@ -15,19 +17,19 @@ body {
     position: relative;
 }
 
-header{
+header {
     position: absolute;
     top: 0;
     padding: 20px;
     background: transparent;
 }
 
-.logo{
+.logo {
     width: 200px;
     border-radius: 30px;
 }
 
- 
+
 main {
     width: 100%;
     padding: 3rem;
@@ -94,20 +96,42 @@ a {
     color: gray;
 }
 
+.profile .editarPerfil {
+    position: absolute;
+    justify-content: flex-start;
+    color: white;
+    width: 192px;
+    background: #000000a1;
+    font-size: 3rem;
+    padding: 4rem;
+}
+
 .profile span {
     font-size: 20px;
     color: gray;
 }
 
 .profile:hover img,
-.profile:hover i{
+.profile:hover .add {
     background-color: white;
     border: white solid 5px;
 }
 
-.profile:hover  span  {
+.profile:hover span {
     color: white;
 }
+
+
+.profile:hover .editarPerfil:hover {
+    background: #000000a1;
+    border: transparent solid 5px;
+}
+
+.profile:hover .editarPerfil span {
+    color: rgb(235, 0, 0);
+}
+
+
 
 button {
     font-size: 24px;
@@ -123,10 +147,20 @@ button:hover {
     color: white;
 }
 
+.concluido {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
 
+.concluido:hover {
+    background-color: rgb(235, 0, 0);
+    color: white;
+    border: 2px solid rgb(235, 0, 0);
+}
 
 @media (max-width:530px) {
-    header{
+    header {
         position: relative;
     }
 
