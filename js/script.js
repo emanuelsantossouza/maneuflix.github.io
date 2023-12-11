@@ -70,6 +70,11 @@ function excluirPerfil(id) {
     return localStorage.setItem('meneulflix', JSON.stringify(usuario));
 }
 
+function salvarEdicao(){
+    console.log('salvando alterações!!!');
+
+}
+
 function mensagem() {
     Swal.fire("Seja bem vindo!!");
 }
@@ -92,7 +97,7 @@ function editarPerfilIcon() {
     buttonEditar = false;
     caminhoInicial = 'editar.html';
     caminho = document.getElementById('caminho');
-    pegarContainer.innerHTML += `<button type="button" id="buttonContinuar" class="concluido" onclick="editarPerfilIcon()">Concluido</button> `;
+    pegarContainer.innerHTML += `<button type="button" id="buttonContinuar" onclick='salvarEdicao()' class="concluido" >Concluido</button> `;
     verifiquePerfils();
 }
 

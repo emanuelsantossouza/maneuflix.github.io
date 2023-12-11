@@ -137,7 +137,11 @@ p {
 }
 a{
     text-decoration: none;
-    color: black;
+    color: gray;
+}
+
+a:hover{
+    color: white;
 }
 
 .checkbox {

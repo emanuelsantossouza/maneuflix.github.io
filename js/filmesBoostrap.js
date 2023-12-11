@@ -98,10 +98,11 @@ function init() {
 
 
 menuLateralHTML.addEventListener('mouseover', function () {
-
+    icons.style.background = 'red'
+    icons.style.color = 'black'
 });
 
 menuLateralHTML.addEventListener('mouseout', function () {
-
+    icons.style.background = 'blue'
 
 });
