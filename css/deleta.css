@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+/* Reset do CSS Padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    background-color: black;
+}
+
+main {
+    display: block;
+    width: 100%;
+}
+
+.container-main {
+    margin: 150px auto 0;
+    color: white;
+    padding: 0 150px;
+}
+
+.container-main h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    margin-bottom: .5rem;
+}
+
+.container-main hr {
+    margin-bottom: 1.5rem;
+}
+
+.container-img-text {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+
+    margin-bottom: 2.5rem;
+}
+
+.container-img {
+    text-align: center;
+    margin-right: 1rem;
+}
+
+img {
+    width: 200px;
+    height: 180px;
+    margin-bottom: .6rem;
+}
+
+
+.container-img-text .informacao {
+    width: 453px;
+    font-size: 1.2rem;
+}
+
+button {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid gray;
+    color: gray;
+    cursor: pointer;
+}
+
+button:first-child  {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+    margin-right: .6rem;
+}
+
+button:last-child:hover {
+    border: 2px solid white;
+    color: rgb(255, 255, 255);
+}
+
+button:first-child:hover  {
+    background-color: red;
+    border: 2px solid red;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: gray;
+    background: transparent;
+}
+
+.btnManter{
+    color: black;
+}
+
+.btnManter:hover{
+    color: white;
+}
+
+.btnExcluir:hover{
+    color: white;
+}

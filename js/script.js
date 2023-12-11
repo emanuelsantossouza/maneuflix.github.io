@@ -3,9 +3,6 @@ let dadosLocal = JSON.parse(localStorage.getItem('meneulflix'));
 let ul = document.querySelector('ul');
 let usuario = [];
 let pegarProfile = document.getElementsByClassName('icons');
-let buttonEditar = true;
-let caminho = '';
-
 
 console.log(dadosLocal);
 
@@ -68,6 +65,11 @@ function salvarUsuario() {
     return localStorage.setItem('meneulflix', JSON.stringify(usuario));
 }
 
+function excluirPerfil(id) {
+    usuario.splice(id, 1);
+    return localStorage.setItem('meneulflix', JSON.stringify(usuario));
+}
+
 function mensagem() {
     Swal.fire("Seja bem vindo!!");
 }
@@ -95,9 +97,11 @@ function editarPerfilIcon() {
 }
 
 function verifiquePerfils() {
-    const primeiroLink = ul.querySelector('li:first-child a');
-    primeiroLink.setAttribute('href', 'editar.html');
-    console.log(primeiroLink);
+    const primeiroLink = document.querySelectorAll('li a');
 
-    primeiroLink.innerHTML = 'editar.html';
+    console.log(primeiroLink);
+    
+    for(let i = 0; i < primeiroLink.length; i++){
+        primeiroLink[i].setAttribute('href', 'editar.html');
+    }
 }
