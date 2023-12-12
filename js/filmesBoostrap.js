@@ -44,11 +44,12 @@ const swiper = new Swiper('.swiper', {
         },
         1200: {
             slidesPerView: 6,
+            spaceBetween: 50
 
         },
         1440: {
             slidesPerView: 7,
-            spaceBetween: 1
+            spaceBetween: 60
         }
     },
 });
