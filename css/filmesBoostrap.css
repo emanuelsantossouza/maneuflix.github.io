@@ -10,10 +10,6 @@
     padding: 0,
 }
 
-#icons{
-
-}
-
 .col-10 {
     padding: 0;
 }
@@ -175,4 +171,19 @@ h3 {
 
 img {
     width: 100%;
+}
+
+#icons{
+    display:grid;
+    gap: 20px;
+    width: 20%;
+    color: white;
+}
+
+#menuLateral{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }

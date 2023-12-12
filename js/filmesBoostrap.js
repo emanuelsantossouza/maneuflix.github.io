@@ -100,10 +100,10 @@ function init() {
 
 menuLateralHTML.addEventListener('mouseover', function () {
     icons.style.background = 'red'
-    icons.style.color = 'black'
+    icons.style.color = 'white'
 });
 
 menuLateralHTML.addEventListener('mouseout', function () {
-    icons.style.background = 'blue'
+    icons.style.background = 'white'
 
 });
