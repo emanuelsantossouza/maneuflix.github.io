@@ -97,12 +97,12 @@ function init() {
 }
 
 
-menuLateralHTML.addEventListener('mouseover', function () {
-    icons.style.background = 'red'
-    icons.style.color = 'white'
-});
+// menuLateralHTML.addEventListener('mouseover', function () {
+//     icons.style.background = 'red'
+//     icons.style.color = 'white'
+// });
 
-menuLateralHTML.addEventListener('mouseout', function () {
-    icons.style.background = 'white'
+// menuLateralHTML.addEventListener('mouseout', function () {
+//     icons.style.background = 'white'
 
-});
+// });
