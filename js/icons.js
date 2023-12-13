@@ -315,26 +315,26 @@ function init() {
                      </div>
         `
 
-         pegarCarrosselIconsDragonball.innerHTML += `
+        pegarCarrosselIconsDragonball.innerHTML += `
          <div class="swiper-slide">
                       <div class="widthImg">
                           <img src="${carrosselIconsClassicos[i].foto}" alt="${carrosselIconsClassicos[i].name}" />
                       </div>
         `
 
-         pegarCarrosselIconNaruto.innerHTML += `
-             <div class="swiper-slide">
-                 <div class="widthImg">
-                         <img src="${carrosselIconsClassicos[i].foto}" alt="${carrosselIconsClassicos[i].name}" />
-                 </div>
-              </div>
+        pegarCarrosselIconNaruto.innerHTML += `
+              <div class="swiper-slide">
+                  <div class="widthImg">
+                          <img src="${carrosselIconsClassicos[i].foto}" alt="${carrosselIconsClassicos[i].name}" />
+                  </div>
+               </div>
+        `
+        pegarCarrosselIconsLoki.innerHTML += `
+                  <div class="swiper-slide">
+                     <div class="widthImg">
+                          <img src="${carrosselIconsClassicos[i].foto}" alt="${carrosselIconsClassicos[i].name}" />
+                      </div>
+                  </div>
          `
-        // pegarCarrosselIconsLoki.innerHTML += `
-        //          <div class="swiper-slide">
-        //             <div class="widthImg">
-        //                  <img src="${carrosselIconsClassicos[i].foto}" alt="${carrosselIconsClassicos[i].name}" />
-        //              </div>
-        //          </div>
-        //     `
     }
 }
