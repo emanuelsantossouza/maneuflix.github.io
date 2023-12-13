@@ -30,8 +30,8 @@ function init() {
 
                 `
             <li>
-                <a href="filmesBoostrap.html">
-                    <div class="profile icons">
+                <a href="#">
+                    <div onclick='usuarioLogado(${usuario[i].nome})' class="profile icons">
                         <img src="${usuario[i].foto}" alt="${usuario[i].nome}">
                         <span>${usuario[i].nome}</span>
                     </div>
@@ -52,6 +52,11 @@ function init() {
                 </li>
                 `
     }
+}
+
+function usuarioLogado(name){
+    console.log(name);
+    let newFilter = console.log(usuario.find(user => user.name == name));
 }
 
 function salvarUsuario() {
