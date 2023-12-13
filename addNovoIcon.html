@@ -1,53 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/addNovoIcon.css">
-    <script src="js/script.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BarraCred Conecta</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/addNovoIcon.css" />
 </head>
 
 <body>
-    <header>
-        <div class="container-edicao">
-            <i class="bi bi-arrow-left"></i>
+  <header>
+    <div class="container-edicao">
+      <i class="bi bi-arrow-left"></i>
 
 
-            <div class="container-perfil">
-                <h2>Editar perfi</h2>
-                <p>Escolha o ícone do seu perfil.</p>
-            </div>
-        </div>
+      <div class="container-perfil">
+        <h2>Editar perfi</h2>
+        <p>Escolha o ícone do seu perfil.</p>
+      </div>
+    </div>
 
-        <div class="container-img">
-            <p>nomeUsuario</p>
-            <img src="img/avatar1.png" alt="foto usuario">
-        </div>
-    </header>
+    <div class="container-img">
+      <p>nomeUsuario</p>
+      <img src="img/avatar1.png" alt="foto usuario">
+    </div>
+  </header>
 
-    <main>
+  <main>
+
+
+    <div class="container-carrossel">
+
+      <div class="swiper">
         <h1>Os clássicos</h1>
-
-        <div class="container-carrossel">
-            <div class="swiper">
-                <div class="swiper-wrapper d-flex">
-                    <div class="swiper-slide">
-                        <div class="widthImg">
-                            <img src="img/carrosselLoki.jpg" alt=""  width="80" height="80"/>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="widthImg">
-                            <img src="img/carrosselLoki.jpg" alt=""  width="80" height="80"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="carrosselClassicos" class="swiper-wrapper d-flex">
+          <!-- Feito no js os cards do carrossel -->
         </div>
-    </main>
+      </div>
+
+      <div class="swiperOnePiece">
+        <h1>Os clássicos</h1>
+        <div id="carrosselOnePiece" class="swiper-wrapper d-flex">
+          <!-- Feito no Javascript com os card do carrossel -->
+        </div>
+      </div>
+
+      <div class="swiperDragonBall">
+        <h1>Os clássicos</h1>
+        <div id="carrosselDragonBall" class="swiper-wrapper d-flex">
+          <!-- Feito np js os card do carrosel -->
+        </div>
+      </div>
+    
+    </div>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/icons.js"></script>
 </body>
 
 </html>
