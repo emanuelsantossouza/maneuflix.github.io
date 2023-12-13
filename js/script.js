@@ -3,7 +3,7 @@ let dadosLocal = JSON.parse(localStorage.getItem('meneulflix'));
 let ul = document.querySelector('ul');
 let usuario = [];
 let pegarProfile = document.getElementsByClassName('icons');
-
+let idUsuarioEscolhido = 0;
 console.log(dadosLocal);
 
 // Validação e criação dos dados do il pagina index
