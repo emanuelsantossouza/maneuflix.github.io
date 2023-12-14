@@ -99,11 +99,18 @@ function init() {
 
 
 menuLateralHTML.addEventListener('mouseover', function () {
-    icons.style.background = 'red'
-    icons.style.color = 'white'
+    icons.style.marginLeft = '100px'
+    icons.style.marginRight = '10px'
+    
 });
 
 menuLateralHTML.addEventListener('mouseout', function () {
-    icons.style.background = 'white'
+    icons.style.marginRight = '50px'
+    icons.style.marginLeft = '50px'
 
 });
+
+
+function verTrailer(){
+    window.location.href="https://www.youtube.com/watch?v=wu1U82CfODM"
+}

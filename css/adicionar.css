@@ -127,6 +127,15 @@ button:hover {
     border: 1px solid white;
 }
 
+#btnOk a{
+    text-decoration: none;
+    color: black;
+}
+
+#btnOk a:hover{
+    color: white;
+}
+
 @media (max-width: 530px) {
     header {
         position: relative;

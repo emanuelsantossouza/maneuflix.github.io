@@ -3,7 +3,7 @@ let dadosLocal = JSON.parse(localStorage.getItem('meneulflix'));
 let ul = document.querySelector('ul');
 let usuario = [];
 let pegarProfile = document.getElementsByClassName('icons');
-
+let idUsuarioEscolhido = 0;
 console.log(dadosLocal);
 
 // Validação e criação dos dados do il pagina index
@@ -29,13 +29,13 @@ function init() {
             ul.innerHTML +=
 
                 `
-            <li>
-                <a href="#">
-                    <div class="profile icons onclick="${salvarUsuarioSelecionado(usuario[i])}">
+            <li onclick="mostrarVideo()">
+                
+                    <div onclick="usuarioLogado(event, '${usuario[i].nome}')" class="profile icons">
                         <img src="${usuario[i].foto}" alt="${usuario[i].nome}">
                         <span>${usuario[i].nome}</span>
                     </div>
-                </a>
+               
             </li>  
                     `
         }
@@ -54,10 +54,20 @@ function init() {
     }
 }
 
-function salvarUsuarioSelecionado(user){
-    let usuario = user;
-    console.log(user);
-    
+
+function usuarioLogado(event, name) {
+    localStorage.removeItem('usuarioLogado');
+    console.log(name); // Isso imprime o nome do span clicado
+
+    // Agora, para obter o objeto do usuário com base no nome, você pode usar a função find
+    let selectedUser = usuario.find(user => user.nome === name);
+
+    localStorage.setItem('usuarioLogado', JSON.stringify(selectedUser));
+    if (selectedUser) {
+        console.log(selectedUser);
+    } else {
+        console.log("Usuário não encontrado");
+    }
 }
 
 function salvarUsuario() {
@@ -71,15 +81,23 @@ function salvarUsuario() {
     return localStorage.setItem('meneulflix', JSON.stringify(usuario));
 }
 
-function excluirPerfil(id) {
-    usuario.splice(id, 1);
-    return localStorage.setItem('meneulflix', JSON.stringify(usuario));
+function excluirPerfil() {
+    let usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+    console.log(usuarioLogado.nome);
+
+    console.log(usuario);
+
+    let novoArrayUsuario = usuario.filter(user => user.nome !== usuarioLogado.nome);
+
+    console.log(novoArrayUsuario);
+
+    // Atualiza o array usuario com o novo array filtrado
+    usuario = novoArrayUsuario;
+
+    // Atualiza o localStorage com o array atualizado
+    localStorage.setItem('meneulflix', JSON.stringify(usuario));
 }
 
-function salvarEdicao(){
-    console.log('salvando alterações!!!');
-
-}
 
 function mensagem() {
     Swal.fire("Seja bem vindo!!");
@@ -111,8 +129,29 @@ function verifiquePerfils() {
     const primeiroLink = document.querySelectorAll('li a');
 
     console.log(primeiroLink);
-    
-    for(let i = 0; i < primeiroLink.length; i++){
+
+    for (let i = 0; i < primeiroLink.length; i++) {
         primeiroLink[i].setAttribute('href', 'editar.html');
     }
+}
+
+function mostrarVideo() {
+    const buttonEditar = document.getElementById('buttonEditar').style.display;
+    console.log(buttonEditar)
+    if (buttonEditar != 'none') {
+
+        const pegaDivMain = document.getElementById('mainContainer').style.display = 'none';
+        pegandoBodyIndex.innerHTML +=
+            `
+        <video width="100%" poster="media/img/capa-video.png" controls autoplay>
+            <source src="video/yt5s.com-Netflix logo intro (2021).mp4" type="video/mp4">
+        </video>
+    `
+        setInterval(() => {
+            window.location.href = 'filmesBoostrap.html'
+        }, 4000);
+    } else{
+        window.location.href = 'editar.html'
+    }
+
 }
