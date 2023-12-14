@@ -30,8 +30,8 @@ function init() {
 
                 `
             <li>
-                <a href="filmesBoostrap.html">
-                    <div class="profile icons">
+                <a href="#">
+                    <div onclick="usuarioLogado(event, '${usuario[i].nome}')" class="profile icons">
                         <img src="${usuario[i].foto}" alt="${usuario[i].nome}">
                         <span>${usuario[i].nome}</span>
                     </div>
@@ -54,6 +54,21 @@ function init() {
     }
 }
 
+function usuarioLogado(event, name) {
+    localStorage.removeItem('usuarioLogado');
+    console.log(name); // Isso imprime o nome do span clicado
+
+    // Agora, para obter o objeto do usuário com base no nome, você pode usar a função find
+    let selectedUser = usuario.find(user => user.nome === name);
+
+    localStorage.setItem('usuarioLogado', JSON.stringify(selectedUser));
+    if (selectedUser) {
+        console.log(selectedUser);
+    } else {
+        console.log("Usuário não encontrado");
+    }
+}
+
 function salvarUsuario() {
     const pegarNomeInput = document.getElementById('nome').value;
     console.log(pegarNomeInput)
@@ -65,14 +80,25 @@ function salvarUsuario() {
     return localStorage.setItem('meneulflix', JSON.stringify(usuario));
 }
 
-function excluirPerfil(id) {
-    usuario.splice(id, 1);
-    return localStorage.setItem('meneulflix', JSON.stringify(usuario));
+function excluirPerfil() {
+    let usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+    console.log(usuarioLogado.nome);
+
+    console.log(usuario);
+
+    let novoArrayUsuario = usuario.filter(user => user.nome !== usuarioLogado.nome);
+
+    console.log(novoArrayUsuario);
+
+    // Atualiza o array usuario com o novo array filtrado
+    usuario = novoArrayUsuario;
+
+    // Atualiza o localStorage com o array atualizado
+    localStorage.setItem('meneulflix', JSON.stringify(usuario));
 }
 
 function salvarEdicao(){
     console.log('salvando alterações!!!');
-
 }
 
 function mensagem() {

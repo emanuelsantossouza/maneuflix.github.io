@@ -31,6 +31,11 @@ header {
     align-items: center;
 }
 
+.container-edicao a{
+    text-decoration: none;
+    color: white;
+}
+
 .container-edicao i {
     font-size: 2.2rem;
     font-weight: 6 00;
@@ -47,7 +52,8 @@ header {
 }
 
 .container-img img {
-    width: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 3px;
     margin-left: 10px;
 }
@@ -59,11 +65,12 @@ img {
 
 .container-img p {
     font-weight: 800;
+    margin: auto;
 }
 
 
 /* Main para baixo */
-.swiper, .swiperOnePiece, .swiperDragonBall {
+.swiper, .swiperOnePiece, .swiperDragonBall, .swiperNaruto, .swiperLoki {
     margin: 1rem 0;
     padding: 0 17%;
 }
