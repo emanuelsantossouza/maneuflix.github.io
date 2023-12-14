@@ -30,8 +30,8 @@ function init() {
 
                 `
             <li>
-                <a href="filmesBoostrap.html">
-                    <div class="profile icons">
+                <a href="#">
+                    <div class="profile icons onclick="${salvarUsuarioSelecionado(usuario[i])}">
                         <img src="${usuario[i].foto}" alt="${usuario[i].nome}">
                         <span>${usuario[i].nome}</span>
                     </div>
@@ -52,6 +52,12 @@ function init() {
                 </li>
                 `
     }
+}
+
+function salvarUsuarioSelecionado(user){
+    let usuario = user;
+    console.log(user);
+    
 }
 
 function salvarUsuario() {
