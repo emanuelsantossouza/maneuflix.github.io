@@ -44,11 +44,12 @@ const swiper = new Swiper('.swiper', {
         },
         1200: {
             slidesPerView: 6,
+            spaceBetween: 50
 
         },
         1440: {
             slidesPerView: 7,
-            spaceBetween: 1
+            spaceBetween: 60
         }
     },
 });
@@ -99,10 +100,10 @@ function init() {
 
 menuLateralHTML.addEventListener('mouseover', function () {
     icons.style.background = 'red'
-    icons.style.color = 'black'
+    icons.style.color = 'white'
 });
 
 menuLateralHTML.addEventListener('mouseout', function () {
-    icons.style.background = 'blue'
+    icons.style.background = 'white'
 
 });
